@@ -3,19 +3,17 @@
 @model HomeViewModel
 
 @{
-    ViewData["Title"] = "ASP.NET Community Standup";
+    ViewData["Title"] = "Gur.Codes();";
 }
 
 @section PreContent {
     <div class="jumbotron">
         <div class="container">
-            <a href="https://www.microsoft.com">
-                <svg width="100" height="21">
-                    <image xlink:href="/images/Microsoft_logo.svg" src="/images/mslogo.png" width="100" height="21"></image>
-                </svg>
+            <a href="https://gerald.verslu.is">
+                <img src="/images/gurcodes.png" style="width: 25%;" class="center-block" />
             </a>
             <h1 class="text-center">
-                ASP.NET Community Standup
+                @*Gur.Codes();*@
                 @if (Model.IsOnAir)
                 {
                     <span class="label label-danger"><strong>ON AIR</strong></span>
@@ -69,10 +67,10 @@
                     }
                     else
                     {
-                        <h2>Streaming Live Every Tuesday</h2>
-                        <p>Alternating between 9:30 AM and 3:45 PM Pacific Time, week to week.</p>
+                        <h2>New episodes: done when it's done</h2>
+                        <p></p>
                     }
-                    <p>Check back here to watch &amp; ask questions then!</p>
+                    <p>Check my <a href="https://blog.verslu.is" target="_blank">blog</a> in the meanwhile, I will also announce new videos there</p>
                 </div>
             }
         </div>
