@@ -97,7 +97,7 @@ namespace live.asp.net.Services
                 {
                     Provider = "YouTube",
                     ProviderId = item.Snippet.ResourceId.VideoId,
-                    Title = GetUsefulBitsFromTitle(item.Snippet.Title),
+                    Title = item.Snippet.Title,//GetUsefulBitsFromTitle(item.Snippet.Title),
                     Description = item.Snippet.Description,
                     ShowDate = DateTimeOffset.Parse(item.Snippet.PublishedAtRaw, null, DateTimeStyles.RoundtripKind),
                     ThumbnailUrl = item.Snippet.Thumbnails.High.Url,
