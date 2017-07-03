@@ -1,4 +1,5 @@
-﻿@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment HostingEnvironment
+﻿@using Microsoft.ApplicationInsights.AspNetCore.Extensions
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment HostingEnvironment
 @inject live.asp.net.Services.IDeploymentEnvironment DeploymentEnvironment
 
 <!DOCTYPE html>
@@ -9,6 +10,13 @@
     <title>@ViewData["Title"]</title>
     <meta name="description" content="The video channel for .NET development related videos by Gerald Versluis" />
     <link rel="shortcut icon" href="~/favicon.ico" />
+    
+    <meta property="og:site_name" content="Gur.Codes(); vlog" />
+    <meta property="og:description" content="The video channel for .NET development related videos by Gerald Versluis" />
+    <meta property="og:image" content="//gur.codes/images/logo800.png">
+    <meta property="og:url" content="@Context.Request?.GetUri()?.AbsoluteUri">
+    <meta property="og:type" content="vlog" />
+
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
